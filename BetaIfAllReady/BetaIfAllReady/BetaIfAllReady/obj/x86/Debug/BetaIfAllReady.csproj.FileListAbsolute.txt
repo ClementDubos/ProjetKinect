@@ -1,0 +1,9 @@
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\bin\Debug\BetaIfAllReady.exe
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\bin\Debug\BetaIfAllReady.pdb
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\bin\Debug\Microsoft.Kinect.Toolkit.FaceTracking.dll
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\obj\x86\Debug\BetaIfAllReady.exe
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\obj\x86\Debug\BetaIfAllReady.pdb
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\bin\Debug\BetaIfAllReady.exe.config
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\bin\Debug\Kinect.Toolbox.dll
+C:\Users\Simon\Desktop\Kinect\BetaIfAllReady\BetaIfAllReady\BetaIfAllReady\bin\Debug\Kinect.Toolbox.Voice.dll

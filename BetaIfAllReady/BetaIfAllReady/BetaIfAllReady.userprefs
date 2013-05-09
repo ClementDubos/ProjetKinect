@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Move_test/Move_test/InitTestMove.cs">
+    <Files>
+      <File FileName="../../Move_test/Move_test/InitTestMove.cs" Line="7" Column="3" />
+      <File FileName="../../Move_test/Move_test/Move_test.cs" Line="1" Column="1" />
+      <File FileName="../../Move_test/Move_test/ProgrammTestMove.cs" Line="1" Column="1" />
+      <File FileName="../../EnvoiTest/EnvoiTest/MainClass.cs" Line="1" Column="1" />
+      <File FileName="BetaIfAllReady/BetaIfAllReadyMain.cs" Line="45" Column="11" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
