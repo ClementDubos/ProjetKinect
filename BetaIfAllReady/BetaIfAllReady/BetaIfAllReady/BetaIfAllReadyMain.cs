@@ -31,11 +31,11 @@ namespace BetaIfAllReady{
 		BetaVoice voice = new BetaVoice(init);
 		init.initializ();
 		VoiceCommander voiceCommander =
-		new VoiceCommander("start", "stop", "move");
-		voiceCommander.Start(init.getKinectSensor());
+		new VoiceCommander("open", "close", "move");
+        voiceCommander.OrderDetected += voice.voiceCommander_OrderDetected;
+        voiceCommander.Start(init.getKinectSensor());
         while (true)
         {
-            voiceCommander.OrderDetected += voice.voiceCommander_OrderDetected;
         }
 		}
 

@@ -1,7 +1,7 @@
 using System;
 using System.IO.Ports;
 using System.Diagnostics;
-
+using System.Speech.Synthesis;
 
 namespace BetaIfAllReady{
 
@@ -9,61 +9,96 @@ namespace BetaIfAllReady{
 
 
 		//Attribut
+        SpeechSynthesizer synth;
 		BetaMove move;
-		BetaInit init;
+		BetaInit initi;
 		Stopwatch timeElaps;
-       
+        bool etat;
+        SerialPort port;
+        
 		//Constructeur
 		public BetaVoice (BetaInit b ){
-			init = b;
-			move = new BetaMove(init);
+            port = new SerialPort("COM3", 9600);
+			initi = b;
+            etat = false;
+            move = new BetaMove(initi);
 			timeElaps = new Stopwatch();
 			timeElaps.Reset();
-           
+            synth = new SpeechSynthesizer();
+            
 		}
 
 		//Requette
 
 
 
+       public void voiceCommander_OrderDetected(string order)
+        {
 
-		public void voiceCommander_OrderDetected (string order){
 
-			 
 
-			switch (order) {
-				case "start":
-                    
-					//init.getPort().Write("a");
-                    Console.WriteLine("d");
-                    
-					break;
-                        
-				case "stop":
-                    
-                       
-                        //init.getPort().Write("z");
-                        Console.WriteLine("z");
-                    
+            switch (order)
+            {
+
+                case "open":
+                    if (!etat)
+                    {
+                        etat = true;
+                        initi.getPort().Write("a");
+                        Console.WriteLine("a");
+
+                    }
                     break;
-				case "move":
-                   
-                        while (timeElaps.ElapsedMilliseconds <= 10000)
-                        {
-                            timeElaps.Start();
-                            init.getKinectSensor().SkeletonFrameReady +=
+                case "close":
+                    if (etat)
+                    {
+                        etat = false;
+                         initi.getPort().Write("z");
+                        Console.WriteLine("z");
+                    }
+                    break;
+                case "move":
+                    if (etat)
+                    {
+
+                        synth.Resume();
+                        synth.Speak("placez vous devans la kinect");
+                        synth.Pause();
+                        initi.getKinectSensor().SkeletonFrameReady +=
                             move.kinect_SkeletonFrameReady;
-                            timeElaps.Stop();
+                       
+                            while (timeElaps.ElapsedMilliseconds <= 5000)
+                            {
+                                timeElaps.Start();
+
+                                timeElaps.Stop();
+                            }
+
+                            timeElaps.Reset();
+                            initi.getKinectSensor().SkeletonFrameReady -=
+                                move.kinect_SkeletonFrameReady;
+                            Speaking();
+                            
                         }
-                        timeElaps.Reset();
                     
-   					break;
+                    else{
+                        synth.Resume();
+                        synth.Speak("Kinect éteinte");
+                        synth.Pause();
+                    }
+                                     
+                    break;
+                default:
+                    break;
+            }
+        }
 
-				default:
-
-					break;
-			}
-		}	
+       public void Speaking()
+       {
+           synth.Resume();
+           synth.Speak("reglage terminé");
+           synth.Pause();
+       }
 	}
 }
 
