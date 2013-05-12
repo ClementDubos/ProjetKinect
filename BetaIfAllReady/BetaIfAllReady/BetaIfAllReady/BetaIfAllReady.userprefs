@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BetaMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BetaVoice.cs">
     <Files>
-      <File FileName="BetaIfAllReadyMain.cs" Line="36" Column="55" />
-      <File FileName="BetaInit.cs" Line="33" Column="43" />
-      <File FileName="BetaMove.cs" Line="59" Column="6" />
-      <File FileName="BetaVoice.cs" Line="21" Column="22" />
+      <File FileName="BetaIfAllReadyMain.cs" Line="1" Column="1" />
+      <File FileName="BetaInit.cs" Line="1" Column="1" />
+      <File FileName="BetaMove.cs" Line="1" Column="1" />
+      <File FileName="BetaVoice.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
